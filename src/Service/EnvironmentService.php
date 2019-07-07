@@ -1,8 +1,9 @@
 <?php
 /**
  *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * The purpose of this service is to serve sensitive Environment variables 
+ * to other services in the ecosystem.
+ * The variables are taken from the .env file, the binding is made in \config\services.yaml
  *
  */
 declare(strict_types=1);
