@@ -1,0 +1,4 @@
+api_core:v1_0:gateway:
+  resource: v1_0/gateway.yaml
+  defaults:
+    is_gateway: true

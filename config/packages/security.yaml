@@ -1,0 +1,23 @@
+security:
+    providers:
+        im_bridge:
+            id:  App\Security\ExternalIdentityManagerUserProvider
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        ping:
+            pattern: ^/$
+            security: false
+
+        main:
+            stateless: true
+            guard:
+                authenticator:
+                    - App\Security\IdentityManagerAuthenticator
+                    - App\Security\ExternalIdentityManagerAuthenticator
+                provider: im_bridge
+                entry_point: App\Security\IdentityManagerAuthenticator
+            user_checker: App\Security\PlatformChecker

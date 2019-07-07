@@ -1,0 +1,3 @@
+api_core:v1_0:
+    prefix: /v1_0
+    resource: routes/modules/v1_0.yaml

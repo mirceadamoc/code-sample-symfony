@@ -1,0 +1,5 @@
+parameters:
+    flow.credit-request.upload-contract:
+        - {"App\\Handler\\Flow\\CoreHandler": "getOrCreateEmptyCreditRequestIfNotExists"}
+        - {"App\\Handler\\Flow\\DocumentsHandler": "uploadContractToDocs"}
+        - {"App\\Handler\\Flow\\NavHandler": "sendContractToNav"}
