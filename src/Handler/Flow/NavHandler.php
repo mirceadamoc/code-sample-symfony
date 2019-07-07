@@ -60,11 +60,11 @@ class NavHandler extends BaseHandler
     {
 
         $content = $payload->getContent();
+        $creditRequest = $payload->getContentParam('credit_request');
         $createdBy = $payload->getContentParam('createdBy');
         $localityName = $payload->getContentParam('localityName');
         $offerDetails = $payload->getContentParam('offerDetails');
         $vendorId = $payload->getContentParam('vendorId');
-        $creditRequest = $payload->getContentParam('credit_request');
 
         if (empty($creditRequest)) {
             $this->logger->error('Credit Request not properly defined!');
